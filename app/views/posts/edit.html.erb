@@ -1,0 +1,8 @@
+<h1 class = "post_text"></h1>
+
+  <%= form_for @post do |f| %>
+      <%= image_tag @post.pic, class: "my_pic" %>
+      <div class = "post_text"> <b> Edit Post Description</b>
+      <%= f.text_field :caption, class: "post_text" %>
+      <%= f.submit%></div>
+  <%end%>

@@ -1,7 +1,12 @@
-<%= image_tag 'https://cdn.pixabay.com/photo/2016/10/31/11/34/instagram-1785355_960_720.png', class: "logo" %><h1> InstaClone</h1>
 
-<% @posts.each do |post| %>
-<%= image_tag post.pic, class: "my_pic" %>
-<p><%= post.caption %></p>
-<%= link_to post.user.email, post.user %>
+<br><%= image_tag 'https://cdn.pixabay.com/photo/2016/10/31/11/34/instagram-1785355_960_720.png', class: "logo" %></br>
+<ul class = "title"><h1><b>InstaClone</b></h1></ul>
+  <% @posts.each do |post| %>
+  <div class="card"> <%= link_to (image_tag post.pic, class: "card-img-top"), post %>
+    <div class="card-body">
+        <p class="card-text"><%= post.caption %></p>
+        <%= link_to post.user.email, post.user, class: "btn btn-primary" %>
+    </div>
+  </div>
+
 <%end%>

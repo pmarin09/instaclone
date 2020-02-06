@@ -1,7 +1,11 @@
+<h3 class="card-title"><%= @user.email %> Profile Page</h3>
 
-<h2><%= @user.email %> Profile Page</h2>
 <% @user.posts.each do |post| %>
-<%= image_tag post.pic, class: "my_pic" %>
-<p><%= post.caption %></p>
-<%= link_to post.user.email, post.user %>
+<div class="card">
+  <%= image_tag post.pic, class: "card-img-top" %>
+  <div class="card-body">
+    <p class="card-text"><%= post.caption %></p>
+    <%= link_to post.user.email, post.user, class: "btn btn-primary" %>
+  </div>
+</div>
 <%end%>

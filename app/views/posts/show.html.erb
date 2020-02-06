@@ -1,6 +1,7 @@
-<%= image_tag @post.pic, class: "my_pic" %>
+<div class="card"><%= image_tag @post.pic, class: "card-img-top" %></div>
 <p><%= @post.caption %></p>
 <%= link_to @post.user.email, @post.user %>
-
-
-<%= button_to "Delete", @post, method: :delete, data: {confirm: "Are you sure?"}, class: "button" %>
+<% if current_user == @post.user %>
+  <%= button_to "Delete", @post, method: :delete %>
+  <%= button_to "Edit This Post", "/posts/#{@post.id}/edit", :method => "get" %>
+<%end%>

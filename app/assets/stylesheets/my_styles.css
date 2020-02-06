@@ -1,29 +1,44 @@
 body{
-	background: #BDBDBD;
+	background: rgb(237, 237, 237);
 	margin: 0;
 }
 
 .my_pic{
-position: relative;
-width: 800px;
+width: 500px;
 height: auto;
-border: 0;
-padding: 0;
 display: block;
+margin-left: auto;
+margin-right: auto;
+width: 45%;
+}
+
+.card{
+width: 45rem;
+margin: auto;
 }
 
 .post_text{
-  width: 600px;
-  	margin: auto;
-  	text-align: center;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo{
   width: 100px;
-  position: relative;
-  left: 0px;
-  top: 0px;
+  position: absolute;
+  left: 10px;
+  top: 35px;
   z-index: -1;
+}
+
+.title{
+ position: absolute;
+ left: 74px;
+ top: 60px;
+ color: blue;
+ font-weight: bold;
+ font-family: Verdana, sans-serif;
 }
 
 .button{
