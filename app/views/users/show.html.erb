@@ -1,0 +1,7 @@
+
+<h2><%= @user.email %> Profile Page</h2>
+<% @user.posts.each do |post| %>
+<%= image_tag post.pic, class: "my_pic" %>
+<p><%= post.caption %></p>
+<%= link_to post.user.email, post.user %>
+<%end%>

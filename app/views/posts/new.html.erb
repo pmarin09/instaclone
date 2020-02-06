@@ -1,0 +1,5 @@
+<%= form_with model: @post do |f| %>
+<div> image: <%= f.file_field :pic %> </div>
+<div>caption: <%= f.text_area :caption, required: true %> </div>
+<%= f.submit %>
+<%end%>

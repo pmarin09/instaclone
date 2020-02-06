@@ -1,0 +1,7 @@
+<%= image_tag 'https://cdn.pixabay.com/photo/2016/10/31/11/34/instagram-1785355_960_720.png', class: "logo" %><h1> InstaClone</h1>
+
+<% @posts.each do |post| %>
+<%= image_tag post.pic, class: "my_pic" %>
+<p><%= post.caption %></p>
+<%= link_to post.user.email, post.user %>
+<%end%>
